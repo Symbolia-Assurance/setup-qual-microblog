@@ -239,3 +239,9 @@ def notifications():
         'data': n.get_data(),
         'timestamp': n.timestamp
     } for n in notifications]
+
+
+@bp.route('/export_all_posts')
+def export_all_posts():
+    posts = db.session.scalars(sa.select(Post).order_by(Post.timestamp.desc()))
+    return [{'author': p.author.username, 'body': p.body} for p in posts]
