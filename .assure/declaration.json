@@ -1,0 +1,81 @@
+{
+  "app_objects": [
+    {
+      "factory": "create_app",
+      "module": "app",
+      "name": "app"
+    },
+    {
+      "module": "app.api",
+      "name": "bp"
+    },
+    {
+      "module": "app.auth",
+      "name": "bp"
+    },
+    {
+      "module": "app.cli",
+      "name": "bp"
+    },
+    {
+      "module": "app.errors",
+      "name": "bp"
+    },
+    {
+      "module": "app.main",
+      "name": "bp"
+    }
+  ],
+  "app_roots": [
+    "app"
+  ],
+  "elevation_writers": [],
+  "execution_authorized": false,
+  "guards": [
+    {
+      "decorator": "login_required",
+      "definition": "flask_login.login_required",
+      "key": "_user_id",
+      "requires": "session_key_present"
+    }
+  ],
+  "hardware_authorized": false,
+  "id": "flask-4cb1a4ca6f1e",
+  "identity_writers": [
+    "app.auth.routes.login"
+  ],
+  "idiom": "flask-session-decorator",
+  "industrial_release_authorized": false,
+  "language": "python",
+  "libraries": [
+    "click",
+    "config",
+    "elasticsearch",
+    "flask_babel",
+    "flask_httpauth",
+    "flask_login",
+    "flask_mail",
+    "flask_migrate",
+    "flask_moment",
+    "flask_sqlalchemy",
+    "flask_wtf",
+    "jwt",
+    "langdetect",
+    "redis",
+    "requests",
+    "rq",
+    "sqlalchemy",
+    "wtforms"
+  ],
+  "physical_validation": false,
+  "public_routes": [],
+  "registrations_complete": true,
+  "release_allowed": false,
+  "schema": "assure.python-auth.declaration/v1",
+  "self_approved": false,
+  "session_identity_key": "_user_id",
+  "signout_views": [
+    "app.auth.routes.logout"
+  ],
+  "simulation": true
+}
